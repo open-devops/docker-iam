@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y \
     xmlstarlet \
 && rm -rf /var/lib/apt/lists/*
 
-# mc (cosmetics)
+# mc (Midnight Commander)
 RUN mkdir -p ~/.config/mc/ \
 && echo 'ENTRY "/var/log/tomcat8" URL "/var/log/tomcat8"' >> ~/.config/mc/hotlist \
 && echo 'ENTRY "/var/opt/midpoint" URL "/var/opt/midpoint"' >> ~/.config/mc/hotlist \
