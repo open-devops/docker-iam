@@ -40,9 +40,11 @@ RUN echo "alias repo-ninja='/opt/midpoint-${VER}/bin/repo-ninja'" > /etc/profile
 
 # apache
 COPY midpoint.conf /etc/apache2/conf-available/
+RUN echo "ServerName localhost" > /etc/apache2/conf-available/fqdn.conf
 RUN a2enmod rewrite proxy proxy_http \
 && a2dissite 000-default \
 && a2enconf midpoint \
+&& a2enconf fqdn \
 && service apache2 stop || :
 
 # deployment
