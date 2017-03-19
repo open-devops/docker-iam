@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y \
     wget \
     xmlstarlet \
 && rm -rf /var/lib/apt/lists/*
+&& rm -rf /tmp/*
 
 # mc (Midnight Commander)
 RUN mkdir -p ~/.config/mc/ \
