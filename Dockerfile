@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
     tomcat8 libservlet3.1-java libcommons-dbcp-java libcommons-pool-java \
     wget \
     xmlstarlet \
-&& rm -rf /var/lib/apt/lists/*
+&& rm -rf /var/lib/apt/lists/* \
 && rm -rf /tmp/*
 
 # mc (Midnight Commander)
